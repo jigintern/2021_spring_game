@@ -1,10 +1,17 @@
+<?php
+
+require_once("database/create_db.php");
+require_once("database/config.php");
+require_once("database/create_table.php");
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
-<link rel="stylesheet" href="banner.css">
-<link rel="stylesheet" href="common.css">
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="css/banner.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/index.css">
 <title>Apex トップページ</title>
 </head>
 <body>
