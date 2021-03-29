@@ -1,4 +1,12 @@
 .banner{
     width: 20%;
+    background-color: darkgray;
+    margin: 10px;
+}
+
+.banner_h1{
+    margin: 5px;
     background-color: gray;
-};
+    color: white;
+    text-align: center;
+}
