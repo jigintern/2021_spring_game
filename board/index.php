@@ -1,3 +1,8 @@
+<?php
+require_once('../database/create_db.php');
+require_once('../database/config.php');
+require_once('../database/create_table.php');
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
