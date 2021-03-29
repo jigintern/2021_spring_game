@@ -18,3 +18,8 @@ time, mark, audio, video {
     vertical-align:baseline;
     background:transparent;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}

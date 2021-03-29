@@ -1,3 +1,22 @@
-.content{
+.wrapper{
     display: flex;
+}
+
+/*-- PC版表示CSS  --*/
+.pc_area{
+  display:block;
+}
+.phone_area{
+  display:none;
+}
+
+
+/*-- スマホ版表示CSS  --*/
+@media screen and (max-width: 768px){
+  .pc_area{
+    display:none;
+  }
+  .phone_area{
+    display:block;
+  }
 }

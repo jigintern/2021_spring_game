@@ -1,9 +1,7 @@
-.index_title{
-    font-size: 50px;
-}
-
 .index{
     margin: 10px;
+    background-color: #dddddd;
+    flex-grow: 1;
 }
 
 .index_h1{

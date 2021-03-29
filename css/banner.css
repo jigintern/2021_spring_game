@@ -5,8 +5,29 @@
 }
 
 .banner_h1{
-    margin: 5px;
-    background-color: gray;
-    color: white;
+    font-size: 110%;
+    margin: 5px 0;
+    padding: 6px 4px 1px 0;
+    border: 3px double;
     text-align: center;
+    border-color: #666;
+    background-color: #222;
+    color: white;
+}
+
+.banner_link{
+    transform: translateX(18px);
+}
+
+.banner_link:before{
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0px;
+  height: 0;
+  width: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 7px solid #994a00;
+  transform: translate(-130%, 7px);
 }
