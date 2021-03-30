@@ -27,6 +27,7 @@ try{
 <link rel="stylesheet" href="../css/bord.css">
 <link rel="stylesheet" href="../css/content.css">
 <link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/topic.css">
 <title>Apex トップページ</title>
 </head>
 <body>
@@ -47,13 +48,15 @@ require_once("header.php");
                 $image_path = $row["image_path"];
                 $created = $row["created"];
                 echo <<<EOT
-                <div class=bord_response>
-                    <a href="bord.php?topic_id=$id">
-                    <p class="bord_thread">$topic</p>
-                    <img src="$image_path">
-                    <p>$created</p>
-                    </a>
+                <a href="bord.php?topic_id=$id">
+                <div class=topic>
+                    <div class="topic_image" style="background-image: url($image_path);"></div>
+                    <div class="topic_discription">
+                        <p class="bord_thread">$topic</p>
+                        <p>$created</p>
+                    </div>
                 </div>
+                </a>
                 EOT;
             }
             ?>
