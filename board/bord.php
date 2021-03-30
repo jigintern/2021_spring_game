@@ -18,6 +18,10 @@ try{
     $count_stmt = $pdo->prepare($count_sql);
     $count_stmt->execute([$topic_id]);
     $count = $count_stmt->fetch(PDO::FETCH_COLUMN);
+    $topic_sql = "select topic from topic where id=?";
+    $topic_stmt = $pdo->prepare($topic_sql);
+    $topic_stmt->execute([$topic_id]);
+    $topic = $topic_stmt->fetch(PDO::FETCH_COLUMN);
 }catch (\Exception $e) {
     return FALSE;
 }
@@ -42,6 +46,7 @@ require_once("header.php");
     require_once("banner.php");
     ?>
     <div class=content>
+        <div class=content_h1><?php echo $topic ?></div>
         <div>
             <?php
             // 表示
