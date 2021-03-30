@@ -29,6 +29,7 @@ try{
         echo '<a href="bord.php?topic_id='.$id.'">';
         echo '<p>'.$topic.'</p>';
         echo '<p>'.$created.'</p>';
+        echo '</a>';
     }
     ?>
 </div>
