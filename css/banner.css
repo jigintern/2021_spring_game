@@ -15,6 +15,7 @@
 
 .banner_h1{
     font-size: 110%;
+    font-weight: bold;
     margin: 5px 0;
     padding: 6px 4px 1px 0;
     border: 3px double;
@@ -25,7 +26,8 @@
 }
 
 .banner_link{
-    transform: translateX(18px);
+  transform: translateX(18px);
+  line-height: 1.6em;
 }
 
 .banner_link:before{
@@ -37,6 +39,6 @@
   width: 0;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
-  border-left: 7px solid #994a00;
+  border-left: 7px solid rgb(107, 48, 0);
   transform: translate(-130%, 7px);
 }

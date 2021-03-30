@@ -22,5 +22,20 @@
     font-weight: bold;
     height: 60px;
     line-height: 60px;
-    border: solid 2px #000000;
+    /* border: solid 2px #000000; */
+}
+
+.header_content:nth-child(-n+2){
+    border-right: 1px dotted black;
+}
+
+.header_content a:hover{
+    padding: 10px;
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+}
+
+.header_content a:hover{
+    background-color: rgb(228, 118, 29);
+    color: white;
 }

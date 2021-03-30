@@ -1,7 +1,7 @@
 .content{
     margin: 10px;
     margin-top: 0px;
-    padding: 10px;
+    padding: 10px 15px;
     background-color: #dddddd;
     flex-grow: 1;
 }
@@ -9,6 +9,7 @@
 .content_items{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .content_card{
@@ -45,6 +46,9 @@
 }
 
 .content_h1{
+    position: relative;
+    left: -5px;
+    font-weight: bold;
     width: 100%;
     padding-left: 10px;
     background-color: black;
