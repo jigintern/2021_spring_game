@@ -19,25 +19,52 @@ try{
 }
 ?>
 
-<div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/bord.css">
+<link rel="stylesheet" href="../css/content.css">
+<link rel="stylesheet" href="../css/reset.css">
+<title>Apex トップページ</title>
+</head>
+<body>
+<?php
+require_once("header.php");
+?>
+<div class=wrapper>
     <?php
-    // 表示
-    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $id = $row["id"];
-        $topic = $row["topic"];
-        $created = $row["created"];
-        echo '<a href="bord.php?topic_id='.$id.'">';
-        echo '<p>'.$topic.'</p>';
-        echo '<p>'.$created.'</p>';
-        echo '</a>';
-    }
+    require_once("banner.php");
     ?>
-</div>
+    <div class=content>
+        <div>
+            <?php
+            // 表示
+            while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                $id = $row["id"];
+                $topic = $row["topic"];
+                $created = $row["created"];
+                echo <<<EOT
+                <div class=bord_response>
+                    <a href="bord.php?topic_id=$id">
+                    <p class="bord_thread">$topic</p>
+                    <p>$created</p>
+                    </a>
+                </div>
+                EOT;
+            }
+            ?>
+        </div>
 
-<form action="post.php" method="post">
-    <input type="hidden" name="class" value="topic">
-    <input type="hidden" name="kind" value="<?=$kind?>">
-    <!-- <input type="file" name="image" required> -->
-    <input type="text" name="topic" required>
-    <input type="submit" value="送信">
-</form>
+        <form action="post.php" method="post">
+            <input type="hidden" name="class" value="topic">
+            <input type="hidden" name="kind" value="<?=$kind?>">
+            <!-- <input type="file" name="image" required> -->
+            <input type="text" name="topic" required>
+            <input type="submit" value="送信">
+        </form>
+    </div>
+</div>
+</body>
+</html>
