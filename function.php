@@ -5,6 +5,8 @@
 // ini_set("post_max_size","4096M");
 // my.ini (max_allowed_packet=-1) 38L
 
+date_default_timezone_set('Asia/Tokyo');
+
 //ユーザ定義関数
 
 function h($s){
@@ -46,6 +48,14 @@ function redirect_topic($kind)
 {
     header("HTTP/1.1 301 Moved Permanently");
     header("Location: topic.php?kind=$kind");
+}
+
+
+/* トップ画面へのリダイレクト */
+function redirect_page($url)
+{
+    header("HTTP/1.1 302 Moved Permanently");
+    header("Location: $url");
 }
 
 /* トップ画面へのリダイレクト */

@@ -32,18 +32,37 @@ if ($_POST["class"] == "bord") {
     /* トピック投稿用 */
     $kind = $_POST["kind"];
     $topic = $_POST["topic"];
-    $name = uniqid().pathinfo($_FILES["image"]["name"])["extension"];
-    $image_path = "../img/topic";
-    move_uploaded_file($_FILES['image']['tmp_name'], $image_path.$name);
+    /*
+    $type = $_FILES["image"]["type"];
+    $content = file_get_contents($_FILES["image"]["tmp_name"]);
+    $size = $_FILES["image"]["size"];
+    */
     try{
         $pdo = new PDO(DSN, DB_USER, DB_PASS);
-        $sql="insert into topic(kind, topic, image_path) value(:kind, :topic, :image_path)";
+        $sql="insert into topic(kind, topic) value(:kind, :topic)";
         $stmt = $pdo->prepare($sql);
         $stmt->bindValue(':kind', $kind, PDO::PARAM_STR);
         $stmt->bindValue(':topic', $topic, PDO::PARAM_STR);
-        $stmt->bindValue(':image_path', $image_path.$name, PDO::PARAM_STR);
+        /*
+        $stmt->bindValue(':image_type', $type, PDO::PARAM_STR);
+        $stmt->bindValue(':image_content', $content, PDO::PARAM_LOB);
+        $stmt->bindValue(':image_size', $size, PDO::PARAM_INT);
+        */
         $stmt->execute();
         redirect_topic($kind);
+    } catch (\Exception $e) {
+        return FALSE;
+    }
+} elseif($_POST["class"] == "edit") {
+    $url = $_POST["url"];
+    $contents = $_POST["contents"];
+
+    try{
+        $pdo = new PDO(DSN, DB_USER, DB_PASS);
+        $sql="insert into edit(url, contents) value(?, ?)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$url, $contents]);
+        redirect_page($url);
     } catch (\Exception $e) {
         return FALSE;
     }
