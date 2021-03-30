@@ -62,7 +62,7 @@ require_once("header.php");
             <input type="hidden" name="kind" value="<?=$kind?>">
             <!-- <input type="file" name="image" required> -->
             <input type="text" name="topic" required>
-            <input type="submit" value="送信">
+            <input type="submit" value="作成">
         </form>
     </div>
 </div>

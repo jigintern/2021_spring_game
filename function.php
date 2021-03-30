@@ -35,10 +35,10 @@ function get_pdo_options()
 }
 
 /* 掲示板へのリダイレクト */
-function redirect()
+function redirect($topic_id)
 {
     header("HTTP/1.1 301 Moved Permanently");
-    header("Location: bord.php");
+    header("Location: bord.php?topic_id=$topic_id");
 }
 
 /* 掲示板へのリダイレクト */

@@ -16,7 +16,7 @@ if ($_POST["class"] == "bord") {
     $lip = 0;
 
     if (!$comment) {
-        redirect();
+        redirect($topic_id);
     }
 
     try {
@@ -24,7 +24,7 @@ if ($_POST["class"] == "bord") {
         $sql = "insert into board(topic_id, comment, lip) value(?, ?, ?)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$topic_id, $comment, $lip]);
-        redirect();
+        redirect($topic_id);
     } catch (\Exception $e) {
         return FALSE;
     }
