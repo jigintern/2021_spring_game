@@ -14,9 +14,9 @@ try{
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$topic_id]);
     // 取得数カウント(もっと楽できるはず)
-    $count_sql = "select count(id) from board group by topic_id";
+    $count_sql = "select count(id) from board where topic_id=? group by topic_id";
     $count_stmt = $pdo->prepare($count_sql);
-    $count_stmt->execute();
+    $count_stmt->execute([$topic_id]);
     $count = $count_stmt->fetch(PDO::FETCH_COLUMN);
 }catch (\Exception $e) {
     return FALSE;
@@ -45,8 +45,8 @@ require_once("header.php");
         <div>
             <?php
             // 表示
+            $id = $count;
             while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-                $id = $count;
                 $created = $row["created"];
                 $comment = $row["comment"];
                 echo <<<EOT
@@ -55,8 +55,9 @@ require_once("header.php");
                     <p>$comment</p>
                 </div>
                 EOT;
-                $count--;
+                $id--;
             }
+            $count = 0;
             ?>
         </div>
 
