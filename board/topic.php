@@ -4,9 +4,9 @@ require("../function.php");
 
 // 種類別
 
-// $kind = $_GET["kind"]; //カテゴリ別に振り分ける際にコメントアウトを解除
+$kind = $_GET["kind"]; //カテゴリ別に振り分ける
 
-$kind = "weapon"; // テスト用
+// $kind = "weapon"; // テスト用
 
 // DBセレクト
 try{
