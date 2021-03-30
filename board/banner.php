@@ -22,14 +22,12 @@
         <div class=banner_link>基礎知識</div>
         <div class=banner_link>武器について</div>
         <div class=banner_link>レジェンドについて</div>
-        <a href="bord.php">
-            <div class=banner_h1>
-                掲示板
-            </div>
-        </a>
-        <div class=banner_link>武器掲示板</div>
-        <div class=banner_link>キャラ掲示板</div>
-        <div class=banner_link>立ち回り掲示板</div>
+        <div class=banner_h1>
+            掲示板
+        </div>
+        <div class=banner_link><a href="topic.php?kind=weapon">武器掲示板</a></div>
+        <div class=banner_link><a href="topic.php?kind=char">キャラ掲示板</a></div>
+        <div class=banner_link><a href="topic.php?kind=move">立ち回り掲示板</a></div>
         <a href="categoriedmovies.php">
         <div class=banner_h1>
             カテゴリ別動画

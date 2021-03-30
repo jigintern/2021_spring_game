@@ -49,7 +49,7 @@ if ($_POST["class"] == "bord") {
         $stmt->bindValue(':image_size', $size, PDO::PARAM_INT);
         */
         $stmt->execute();
-        redirect_topic();
+        redirect_topic($kind);
     } catch (\Exception $e) {
         return FALSE;
     }

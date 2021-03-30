@@ -42,10 +42,10 @@ function redirect()
 }
 
 /* 掲示板へのリダイレクト */
-function redirect_topic()
+function redirect_topic($kind)
 {
     header("HTTP/1.1 301 Moved Permanently");
-    header("Location: topic.php");
+    header("Location: topic.php?kind=$kind");
 }
 
 /* トップ画面へのリダイレクト */
