@@ -27,5 +27,8 @@ require_once('../database/create_table.php');
             <b>より良いサイトを作るためにぜひご協力よろしくお願いします！</b>
         </div>
     </div>
+    <?php
+    require_once("footer.php");
+    ?>
 </body>
 </html>
