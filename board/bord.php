@@ -4,7 +4,7 @@ if (!isset($_SESSION)) {
     session_start();
 }
 // トピックid
-$topic_id = 0;
+$topic_id = $_GET["topic_id"];
 $_SESSION["topic_id"] = $topic_id;
 
 // DBセレクト
