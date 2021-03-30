@@ -40,10 +40,18 @@ function redirect()
     header("HTTP/1.1 301 Moved Permanently");
     header("Location: bord.php");
 }
-/* Welcome画面へのリダイレクト */
+
+/* 掲示板へのリダイレクト */
+function redirect_topic()
+{
+    header("HTTP/1.1 301 Moved Permanently");
+    header("Location: topic.php");
+}
+
+/* トップ画面へのリダイレクト */
 function redirect_top()
 {
     header("HTTP/1.1 302 Moved Permanently");
-    header("Location: ../index.php");
+    header("Location: index.php");
 }
 ?>
