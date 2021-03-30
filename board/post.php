@@ -16,7 +16,7 @@ if ($_POST["class"] == "bord") {
     $lip = 0;
 
     if (!$comment) {
-        redirect();
+        redirect($topic_id);
     }
 
     try {
