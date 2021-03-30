@@ -19,7 +19,9 @@
                 </a>
             </div>
             <div class=header_content>
-                掲示板
+                <a href="bordtop.php">
+                    掲示板
+                </a>
             </div>
             <div class=header_content>
                 <a href="categoriedmovies.php">
