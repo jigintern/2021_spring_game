@@ -19,27 +19,21 @@
             <div class=content_h1>初心者向け記事一覧</div>
             <div class=content_items>
                 <div class=content_card>
-                    <div style="background-image: url(../img/基本操作について.jpg);"></div>
-                    <a href="kihonsousa.php">
-                        基本操作について
+                    <div style="background-image: url(../img/武器について.jpg);"></div>
+                    <a href="topic.php?kind=weapon">
+                        武器掲示板
                     </a>
                 </div>
                 <div class=content_card>
                     <div style="background-image: url(../img/基礎知識について.png);"></div>
-                    <a href="kisotishiki.php">
-                        基礎知識について
+                    <a href="topic.php?kind=char">
+                        キャラ掲示板
                     </a>
                 </div>
                 <div class=content_card>
-                    <div style="background-image: url(../img/武器について.jpg);"></div>
-                    <a href="aboutweapon.php">
-                        武器について
-                    </a>
-                </div>
-                <div class=content_card>
-                    <div style="background-image: url(../img/レジェンドについて.png);"></div>
-                    <a href="aboutlegend.php">
-                        レジェンドについて
+                    <div style="background-image: url(../img/立ち回り.jpg);"></div>
+                    <a href="topic.php?kind=move">
+                        立ち回り掲示板
                     </a>
                 </div>
             </div>

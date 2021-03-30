@@ -5,15 +5,15 @@
 
 .header_title{
     width: 100%;
-  text-shadow:2px 2px 0 #FFF, -2px -2px 0 #FFF,
-              -2px 2px 0 #FFF, 2px -2px 0 #FFF,
-              0px 2px 0 #FFF,  0-2px 0 #FFF,
-              -2px 0 0 #FFF, 2px 0 0 #FFF;
-    text-align: center;
-    font-size: 50px;
     background-color: rgb(226, 102, 0);
 }
 
+.header_title img{
+    position: relative;
+    height: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 .header_content{
     width: calc(100% / 3);

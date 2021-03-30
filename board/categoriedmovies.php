@@ -16,23 +16,31 @@
         require_once("banner.php");
         ?>
         <div class=content>
-            <div class=content_h1>初心者向け記事一覧</div>
+            <div class=content_h1>カテゴリ別動画</div>
             <div class=content_items>
                 <div class=content_card>
                     <div style="background-image: url(../img/武器解説.png);"></div>
+                    <a href="weaponkaisetu.php">
                     武器解説
+                    </a>
                 </div>
                 <div class=content_card>
                     <div style="background-image: url(../img/立ち回り.jpg);"></div>
+                    <a href="tatimawari.php">
                     立ち回り解説
+                    </a>
                 </div>
                 <div class=content_card>
                     <div style="background-image: url(../img/レジェンド解説.png);"></div>
+                    <a href="legendkaisetu.php">
                     レジェンド解説
+                    </a>
                 </div>
                 <div class=content_card>
                     <div style="background-image: url(../img/上達法について.jpg);"></div>
+                    <a href="joutatuhou.php">
                     上達法について
+                    </a>
                 </div>
             </div>
         </div>

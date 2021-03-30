@@ -4,6 +4,14 @@
     margin: 10px;
 }
 
+.banner_link a:hover {
+    text-decoration:underline dotted;
+}
+
+.banner > a:hover {
+    text-decoration:underline dotted white;
+}
+
 .banner_h1{
     font-size: 110%;
     margin: 5px 0;

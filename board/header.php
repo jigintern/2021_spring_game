@@ -6,7 +6,11 @@
 <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
-    <div class=header_title><a href="index.php">ゲームチャンネル</a></div>
+    <a href="index.php">
+        <div class=header_title>
+            <img src="../GameChannel.png">
+        </div>
+    </a>
     <div class="phone_area">
         <div class="header">
             <div class=header_content>
