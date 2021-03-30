@@ -11,7 +11,7 @@ $kind = $_GET["kind"]; //カテゴリ別に振り分ける
 // DBセレクト
 try{
     $pdo = new PDO(DSN, DB_USER, DB_PASS);
-    $sql = "select id, topic, image_content, created from topic where kind=? order by created desc";
+    $sql = "select id, topic, image_path, created from topic where kind=? order by created desc";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$kind]);
 }catch (\Exception $e) {
@@ -44,11 +44,13 @@ require_once("header.php");
             while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
                 $id = $row["id"];
                 $topic = $row["topic"];
+                $image_path = $row["image_path"];
                 $created = $row["created"];
                 echo <<<EOT
                 <div class=bord_response>
                     <a href="bord.php?topic_id=$id">
                     <p class="bord_thread">$topic</p>
+                    <img src="$image_path">
                     <p>$created</p>
                     </a>
                 </div>
@@ -57,12 +59,12 @@ require_once("header.php");
             ?>
         </div>
 
-        <form action="post.php" method="post">
-            <input type="hidden" name="class" value="topic">
-            <input type="hidden" name="kind" value="<?=$kind?>">
-            <!-- <input type="file" name="image" required> -->
-            <input type="text" name="topic" required>
-            <input type="submit" value="作成">
+        <form action="post.php" method="post" enctype=multipart/form-data>
+            <input type="hidden" name="class" value="topic"/>
+            <input type="hidden" name="kind" value="<?=$kind?>"/>
+            <input type="file" name="image" required/>
+            <input type="text" name="topic" required/>
+            <input type="submit" value="作成"/>
         </form>
     </div>
 </div>

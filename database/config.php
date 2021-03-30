@@ -1,5 +1,7 @@
 <?php
 ini_set('display_errors', 1); //エラー表示
+ini_set("upload_max_filesize","4096M");
+ini_set("post_max_size","4096M");
 //0で非表示、1で表示
 //定数定義 define("定数名","中身");
 define('DSN', 'mysql:host=localhost;dbname=game;charset=utf8mb4;');

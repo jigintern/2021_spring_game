@@ -10,9 +10,7 @@ try {
         id int not null auto_increment,
         kind varchar(255) character set utf8 collate utf8_general_ci not null,
         topic varchar(255) character set utf8 collate utf8_general_ci not null,
-        image_type varchar(255) not null,
-        image_content longblob not null,
-        image_size int not null,
+        image_path varchar(255) not null,
         created timestamp not null default current_timestamp,
         primary key(id)
       )");
