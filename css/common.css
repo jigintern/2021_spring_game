@@ -12,7 +12,7 @@
 
 
 /*-- スマホ版表示CSS  --*/
-@media screen and (max-width: 768px){
+@media screen and (max-width: 900px){
   .pc_area{
     display:none;
   }
