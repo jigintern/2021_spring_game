@@ -16,7 +16,7 @@
         require_once("banner.php");
         ?>
         <div class=content>
-            <div class=content_h1>初心者向け記事一覧</div>
+            <div class=content_h1>掲示板一覧</div>
             <div class=content_items>
                 <div class=content_card>
                     <div style="background-image: url(../img/武器について.jpg);"></div>
