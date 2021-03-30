@@ -23,23 +23,49 @@ try{
 }
 ?>
 
-<div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/bord.css">
+<link rel="stylesheet" href="../css/content.css">
+<link rel="stylesheet" href="../css/reset.css">
+<title>Apex トップページ</title>
+</head>
+<body>
+<?php
+require_once("header.php");
+?>
+<div class=wrapper>
     <?php
-    // 表示
-    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-        $id = $count;
-        $comment = $row["comment"];
-        $created = $row["created"];
-        echo '<p>'.$id.'</p>';
-        echo '<p>'.$comment.'</p>';
-        echo '<p>'.$created.'</p>';
-        $count--;
-    }
+    require_once("banner.php");
     ?>
-</div>
+    <div class=content>
+        <div>
+            <?php
+            // 表示
+            while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+                $id = $count;
+                $created = $row["created"];
+                $comment = $row["comment"];
+                echo <<<EOT
+                <div class=bord_response>
+                    <p>$id <span class=bord_time>$created</span></p>
+                    <p>$comment</p>
+                </div>
+                EOT;
+                $count--;
+            }
+            ?>
+        </div>
 
-<form action="post.php" method="post">
-    <input type="hidden" name="class" value="bord">
-    <textarea name="comment"></textarea>
-    <input type="submit" value="送信">
-</form>
+        <form action="post.php" method="post">
+            <input type="hidden" name="class" value="bord">
+            <textarea name="comment"></textarea>
+            <input type="submit" value="送信">
+        </form>
+    </div>
+</div>
+</body>
+</html>

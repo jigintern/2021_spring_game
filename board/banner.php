@@ -22,9 +22,11 @@
         <div class=banner_link>基礎知識</div>
         <div class=banner_link>武器について</div>
         <div class=banner_link>レジェンドについて</div>
-        <div class=banner_h1>
-            掲示板
-        </div>
+        <a href="bord.php">
+            <div class=banner_h1>
+                掲示板
+            </div>
+        </a>
         <div class=banner_link>武器掲示板</div>
         <div class=banner_link>キャラ掲示板</div>
         <div class=banner_link>立ち回り掲示板</div>
